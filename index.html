@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarTech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white">
+
+  <header class="bg-black shadow-lg sticky top-0 z-50">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src=".\images\LOGO.png" alt="Logo da CarTech" class="h-10">
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#inicio" class="text-gray-300 hover:text-white transition-colors duration-300">Início</a>
+      <a href="#solucoes" class="text-gray-300 hover:text-white transition-colors duration-300">Soluções</a>
+      <a href="#contato" class="text-gray-300 hover:text-white transition-colors duration-300">Contato</a>
+      <button class="bg-gray-700 text-white font-bold py-2 px-4 rounded-full hover:bg-gray-600 transition-colors duration-300 shadow-md">
+        Login
+      </button>
+    </div>
+    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Início</a>
+      <a href="#solucoes" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Soluções</a>
+      <a href="#contato" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Contato</a>
+      <button class="w-full bg-gray-700 text-white font-bold py-2 px-4 rounded-full hover:bg-gray-600 transition-colors duration-300 mt-2">
+        Login
+      </button>
+    </div>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <main>
+    <section id="inicio" class="relative bg-gray-950 text-white flex items-center justify-center min-h-[60vh] md:min-h-[80vh] overflow-hidden">
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-gray-950 opacity-90"></div>
+      
+      <!-- Video Placeholder (video de fundo se formos colocar) -->
+      <video autoplay muted loop class="absolute inset-0 h-full w-full object-cover z-0 opacity-20">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-car-at-a-gas-station-at-night-42284-large.mp4" type="video/mp4">
+      </video>
+
+      <div class="relative z-10 text-center px-6 py-12 md:py-24 max-w-4xl mx-auto">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4 text-white">
+          Sua Oficina no Próximo Nível
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 mb-8">
+          A plataforma completa para atrair mais clientes e gerenciar suas demandas com eficiência.
+        </p>
+        <button class="bg-white text-gray-950 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition-transform transform hover:scale-105 shadow-xl">
+          Conheça as Vantagens
+        </button>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="solucoes" class="container mx-auto px-6 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Nossas Soluções para a sua Oficina</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="bg-gray-800 rounded-lg p-8 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center mb-4 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm0 18a8 8 0 118-8 8.009 8.009 0 01-8 8zm-1-12h2v6h-2z"/>
+                <circle cx="12" cy="11.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white text-center mb-2">Gestão de Clientes</h3>
+          <p class="text-gray-400 text-center">Organize informações, histórico de serviços e mantenha contato com seus clientes.</p>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="bg-gray-800 rounded-lg p-8 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center mb-4 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+              <path d="M12 8a4 4 0 00-4 4h2a2 2 0 012-2v-2zm0 8a4 4 0 004-4h-2a2 2 0 01-2 2v2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white text-center mb-2">Agenda Online</h3>
+          <p class="text-gray-400 text-center">Controle agendamentos, visualize a demanda diária e otimize o tempo da sua equipe.</p>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="bg-gray-800 rounded-lg p-8 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center mb-4 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm0 18a8 8 0 118-8 8.009 8.009 0 01-8 8zm-1-12h2v6h-2z"/>
+              <path d="M12 10a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white text-center mb-2">Marketing para Oficinas</h3>
+          <p class="text-gray-400 text-center">Ferramentas para destacar sua oficina e atrair mais veículos para sua garagem.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contato" class="bg-black text-gray-400 py-12">
+    <div class="container mx-auto px-6 text-center">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="text-sm">
+          &copy; 2024 CarTech. Todos os direitos reservados.
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07c3.252.148 4.618 1.63 4.764 4.765.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.63 4.618-4.765 4.764-1.265.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.618-1.63-4.765-4.764-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.63-4.618 4.765-4.765 1.266-.057 1.645-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.28.058 1.688.072 4.947.072s3.668-.014 4.948-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.948 0-3.259-.014-3.668-.072-4.948-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073z"/>
+              <path d="M12 6.578c-3.13 0-5.672 2.542-5.672 5.672s2.542 5.672 5.672 5.672 5.672-2.542 5.672-5.672-2.542-5.672-5.672-5.672zm0 9.271c-2.095 0-3.799-1.704-3.799-3.799s1.704-3.799 3.799-3.799 3.799 1.704 3.799 3.799-1.704 3.799-3.799 3.799z"/>
+              <circle cx="16.993" cy="7.006" r="1.396"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.254 6.444c-.752.333-1.554.557-2.39.66.864-.52 1.528-1.346 1.84-2.327-.808.479-1.683.827-2.614 1.015-2.022-2.15-5.32-2.222-7.447.112C8.75 8.156 8.75 10.237 8.75 12.012c0 .4-.008.8-.024 1.196C5.932 12.868 3.525 11.025 1.7 8.35c-.886 1.517-.557 2.92.296 4.312.656.326 1.34.464 2.022.56-.254.78-.508 1.562-.762 2.343-2.316.326-4.227 1.85-5.228 4.312-.424.479-.695 1.066-1.074 1.536.872.238 1.748.333 2.624.285 2.158-.238 3.993-1.683 4.88-3.921 1.72 1.17 3.784 1.55 5.656 1.156 2.03-.43 3.65-1.996 4.54-4.212-1.074.204-2.122-.16-3.054-.56.918-.557 1.554-1.34 1.84-2.327.333-.91.565-1.9.66-2.923.095-.75-.16-1.464-.54-2.096-.341-.57-.864-1.074-1.528-1.52z"/>
+            </svg>
+          </a>
+          <!-- Adicione mais ícones de redes sociais conforme necessário -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para o menu mobile -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fechar o menu ao clicar em um link
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
