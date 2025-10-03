@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CarTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen flex items-center justify-center p-4">
+
+    <!-- Container do Formulário de Login -->
+    <div class="w-full max-w-md bg-gray-900 p-8 md:p-10 rounded-xl shadow-2xl border border-gray-800">
+        
+        <div class="text-center mb-8">
+            <!-- Logo -->
+            <img src="https://raw.githubusercontent.com/Zelomacvini/cartech-projeto-uninove/main/images/logo-cartech.png" 
+                 alt="Logo da CarTech" 
+                 class="h-12 mx-auto mb-4">
+            <h1 class="text-3xl font-bold text-white">Acesso ao Sistema</h1>
+            <p class="text-gray-400 mt-2">Acesso exclusivo para funcionários da mecânica.</p>
+        </div>
+
+        <form action="#" method="POST" class="space-y-6">
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-1">E-mail</label>
+                <input type="email" id="email" name="email" required 
+                       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 
+                              focus:outline-none focus:ring-gray-600 focus:border-gray-600 transition duration-300">
+            </div>
+
+            <div>
+                <label for="senha" class="block text-sm font-medium text-gray-300 mb-1">Senha</label>
+                <input type="password" id="senha" name="senha" required 
+                       class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 
+                              focus:outline-none focus:ring-gray-600 focus:border-gray-600 transition duration-300">
+            </div>
+
+            <!-- Texto de suporte -->
+            <p class="text-sm text-gray-400">
+                Problemas para acessar? Entre em contato com a equipe de suporte da CarTech.
+            </p>
+            
+            <!-- Botão "Entrar" -->
+            <button type="submit" 
+                    class="w-full bg-gray-700 text-white font-bold py-3 px-4 rounded-full text-lg 
+                           hover:bg-white hover:text-gray-900 
+                           active:bg-white active:text-gray-900 
+                           transition-colors duration-300 shadow-md">
+                Entrar
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
